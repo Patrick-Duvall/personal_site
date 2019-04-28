@@ -28,11 +28,11 @@ class PersonalSite
   end
 
   def self.blog_2
-    render_view('blogs/2.html')
+    render_view('2.html')
   end
 
   def self.blog_3
-    render_view('blogs/3.html')
+    render_view('3.html')
   end
 
   def self.about
@@ -46,7 +46,7 @@ class PersonalSite
   def self.render_view(page, code = '200')
     [code, {'Content-Type' => 'text/html'}, [File.read("./app/views/#{page}")]]
   end
-
+  
   def self.css
    render_static('main.css')
  end
