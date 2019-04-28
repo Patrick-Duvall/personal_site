@@ -6,7 +6,9 @@ class PersonalSite
     when '/' then index
     when '/about' then about
     when '/blog' then blog
-
+    when '/blogs/1' then blog_1
+    when '/blogs/2' then blog_2
+    when '/blogs/3' then blog_3
     when '/main.css' then css
     else
       error
@@ -19,6 +21,18 @@ class PersonalSite
 
   def self.blog
     render_view('blog.html')
+  end
+
+  def self.blog_1
+    render_view('blogs/1.html')
+  end
+
+  def self.blog_2
+    render_view('blogs/2.html')
+  end
+
+  def self.blog_3
+    render_view('blogs/3.html')
   end
 
   def self.about
